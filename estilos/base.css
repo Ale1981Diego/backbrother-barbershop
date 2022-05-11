@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Literata:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Literata', serif;
+    position: relative;
+    cursor: url('../imagenes/tijera.png'), auto;
+}
+
+div.cover {
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    display: none;
+    opacity: 0;
+    transition: all 500ms ease-out;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.cover-active {
+    opacity: 1!important;
+    display: initial!important;
+}

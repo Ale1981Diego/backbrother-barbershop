@@ -1,0 +1,20 @@
+div#Error-404 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+div#Error-404 h1 {
+    font-size: 20em;
+}
+
+div#Error-404 h2 {
+    font-size: 15em;
+}
+
+div#Error-404 p {
+    font-size: 10em;
+}
