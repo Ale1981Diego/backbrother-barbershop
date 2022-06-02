@@ -3,21 +3,25 @@ import menu from '../utils/menu.js';
 import footer from '../utils/footer.js'
 
 export default function () {
+    let {body} = document;
 
-    window.addEventListener('resize', ()=> {
+    let observador = new ResizeObserver((entrada) =>{
+        let {width} = entrada[0].contentRect;
         let divLlamada = document.querySelector('.llamada');
         let divScroll = document.querySelector('.scroll-up');
-        if (window.innerWidth >= 768) 
+        if (width >= 768) 
         {
             divLlamada.classList.add('display-none');
             divScroll.classList.remove('display-none');
         } 
-        else if (window.innerWidth < 768)
+        else if (width < 768)
         {
             divLlamada.classList.remove('display-none');
             divScroll.classList.add('display-none');
         }
     });
+
+    observador.observe(body);
 
     /* función llamada - directa */
     let llamada = () => {
