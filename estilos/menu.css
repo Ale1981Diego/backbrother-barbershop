@@ -62,6 +62,11 @@ ul li.link:last-child, ul li.link a.turno:last-child {
     background-color: rgba(218,189,152,0.8);
 }
 
+.fa-whatsapp {
+    margin-left: 1em;
+    font-size: 1.2em;
+}
+
 
 /*menu hamburger*/
 .hamburger {
