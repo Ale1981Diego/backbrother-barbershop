@@ -2,7 +2,6 @@ import { html, render } from "./lit.js";
 
 
 export default function () {
-
     /* movimiento menu hamburguesa - despliega menu lateral */
     
     let menu = () => {
@@ -23,6 +22,8 @@ export default function () {
         cover.classList.toggle('cover-active');
     };
 
+    let sacarTurno = () => {window.open('https://api.whatsapp.com/send?phone=541164358797&text=Hola chicos, quería solicitar el turno de las hs. Muchas gracias!')}
+
     return html `
     <div class="header" id="header">
         <img src="imagenes/logo-marca(sf).png" alt="logo de la barberia" class="img-logo" id="img-log">
@@ -33,7 +34,7 @@ export default function () {
                 <li class="link link-services"><a href="#servicios" title="ir a servicios">Servicios</a></li>
                 <li class="link link-image"><a href="#imagenes" title="ir a fotos">Imagenes</a></li>
                 <li class="link link-contact"><a href="#contacto" title="ir a contactos">Contactos</a></li>
-                <li class="link link-turn"><a href="turnos" class="turno" title="ir a sacar turnos">Turnos</a></li>
+                <li class="link link-turn"><a href="#" class="turnos" title="ir a sacar turnos" @click=${sacarTurno}>Turnos<i class="fa-brands fa-whatsapp"></i></a></li>
             </ul>
         </nav>
         <div class="menu-hamburger" id="menu-hamburger">
